@@ -76,23 +76,23 @@
 	return nil;
 }
 
-- (void)willMoveToSuperview:(UIView *)newSuperview
-{
-	UITableView *tableView = (UITableView *)newSuperview;
-	
-	if (![tableView isKindOfClass:[UITableView class]])
-	{
-		tableView = (UITableView *)tableView.superview;
-	}
-	
-	if ([self _containingTableView].style == UITableViewStyleGrouped)
-	{
-		// need no background because otherwise this would overlap the rounded corners
-		_attributedTextContextView.backgroundColor = [DTColor clearColor];
-	}
-	
-	[super willMoveToSuperview:newSuperview];
-}
+//- (void)willMoveToSuperview:(UIView *)newSuperview
+//{
+//	UITableView *tableView = (UITableView *)newSuperview;
+//	
+//	if (![tableView isKindOfClass:[UITableView class]])
+//	{
+//		tableView = (UITableView *)tableView.superview;
+//	}
+//	
+//	if ([self _containingTableView].style == UITableViewStyleGrouped)
+//	{
+//		// need no background because otherwise this would overlap the rounded corners
+//		_attributedTextContextView.backgroundColor = [DTColor clearColor];
+//	}
+//	
+//	[super willMoveToSuperview:newSuperview];
+//}
 
 
 
